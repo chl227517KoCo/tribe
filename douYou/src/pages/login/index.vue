@@ -1,25 +1,28 @@
 <template>
-  <div>
+  <div class="bg-img">
     <v-header></v-header>
-    <div class="mg10">
-      <van-cell-group >
+    <div class="login-body">
+      <div class="header-img">
+        <img src="static/img/user.png"/>
+      </div>
+      <van-cell-group>
         <van-field
           v-model="username"
-          required
+          left-icon="contact"
           clearable
-          label="用户名"
-          placeholder="请输入用户名"
+          placeholder="请输入账号/手机号"
         />
 
         <van-field
           v-model="password"
+          left-icon="password-view"
           type="password"
-          label="密码"
           placeholder="请输入密码"
-          required
+          icon="password-view"
         />
       </van-cell-group>
       <van-button size="large" type="primary" class="mg10 btn">立即登录</van-button>
+      <div >忘记密码？</div>
     </div>
 
     </van-field>
@@ -43,12 +46,42 @@
   }
 </script>
 <style scoped lang="scss">
-  .mg10{
-    margin-top:10px;
+  .van-cell-group:after{
+    border-top:0px #fff;
   }
-  .btn{
-    width:90%;
-    margin: 40px 5%;
+  .bg-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../../../static/img/login_bg.png') 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+  .login-body {
+    margin-top: 7rem;
+
+  .header-img {
+    text-align: center;
+
+  img {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  }
+
+  }
+  }
+  .mg10 {
+    margin-top: 10px;
+  }
+
+  .btn {
+    width: 80%;
+    margin: 40px 10%;
+    background-color: #000;
+    border:1px solid #000;
+    border-radius:3rem
   }
 
 </style>

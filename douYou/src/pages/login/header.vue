@@ -1,21 +1,34 @@
 <template>
-  <van-nav-bar title="登录"
-               right-text="注册"
-               @click-right="register"
-  ></van-nav-bar>
+  <div class="login-header">
+    <span @click="register()">注册</span>
+  </div>
 </template>
 
 
 <script>
 
   export default {
-    name: "header",
+    name: "login-header",
     methods: {
       register(){
-        console.log('register');
         this.$router.push('/register');
       }
 
     }
   }
 </script>
+<style lang="scss">
+  .login-header {
+    height: 46px;
+    line-height: 46px;
+    text-align: right;
+    padding: 5px;
+  span {
+    color: #fff;
+    padding: 5px 15px;
+    border: 1px solid #fff;
+    border-radius: 23px;
+  }
+
+  }
+</style>
