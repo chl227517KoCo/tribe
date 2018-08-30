@@ -136,6 +136,12 @@
   }
 </script>
 <style lang="scss">
+  .van-notice-bar{
+    background: #000;
+    color:#fff;
+    height: 24px;
+  }
+
   .img-list {
     width: 100%;
 
@@ -145,8 +151,8 @@
     margin-top: 10px;
 
   .header-img {
-    width: 1rem;
-    height: 1rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
     box-shadow: beige 0 0 3px;
   }

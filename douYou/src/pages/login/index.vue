@@ -22,7 +22,17 @@
         />
       </van-cell-group>
       <van-button size="large" type="primary" class="mg10 btn">立即登录</van-button>
-      <div >忘记密码？</div>
+      <div class="forget">忘记密码？</div>
+      <div style="margin:20px;">
+        <img style="width:100%;" src="static/img/or.png"/>
+        <van-row type="flex" justify="space-around" class="other mg10">
+          <van-col span="8">
+            <img src="static/img/wechat.png"/>
+          </van-col>
+          <van-col span="8">  <img src="static/img/weibo.png"/></van-col>
+          <van-col span="8"><img src="static/img/qq.png"/></van-col>
+        </van-row>
+      </div>
     </div>
 
     </van-field>
@@ -56,7 +66,6 @@
     background: url('../../../static/img/login_bg.png') 100% 100%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-
   .login-body {
     margin-top: 7rem;
 
@@ -83,5 +92,18 @@
     border:1px solid #000;
     border-radius:3rem
   }
+.forget{
+  text-align: right;
+  margin:0 10px;
+}
+.other{
+  .van-col{
+    text-align: center;
+  img{
+    height:1.5rem;
+  }
+
+  }
+}
 
 </style>

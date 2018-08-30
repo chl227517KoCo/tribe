@@ -1,28 +1,28 @@
 <template>
-  <div>
+  <div class="register_bg">
     <v-header></v-header>
     <div class="mg10">
-      <van-cell-group >
+      <div class="header-img">
+        <img src="static/img/register_img.png"/>
+      </div>
+      <van-cell-group>
         <van-field
           v-model="phone"
-          required
-          label="手机号"
+          left-icon="contact"
           placeholder="请输入手机号"
         />
         <van-field
           v-model="username"
-          required
           clearable
-          label="用户名"
+          left-icon="contact"
           placeholder="请输入用户名"
         />
 
         <van-field
           v-model="password"
           type="password"
-          label="密码"
+          left-icon="contact"
           placeholder="请输入密码"
-          required
         />
       </van-cell-group>
       <van-button size="large" type="primary" class="mg10 btn">立即注册</van-button>
@@ -49,12 +49,39 @@
   }
 </script>
 <style scoped lang="scss">
-  .mg10{
-    margin-top:10px;
+  .van-field, .van-cell__left-icon {
+    line-height: 30px;
   }
-  .btn{
-    width:90%;
-    margin: 40px 5%;
+
+  .mg10 {
+    margin-top: 10px;
+  }
+
+  .btn {
+    width: 80%;
+    margin: 40px 10%;
+    background-color: #000;
+    border: 1px solid #000;
+    border-radius: 3rem
+  }
+
+  .register_bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../../../static/img/register_bg.png') 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+  .header-img {
+    text-align: center;
+    margin: 2rem 0;
+
+  img {
+    width: 7rem;
+  }
+
+  }
   }
 
 </style>

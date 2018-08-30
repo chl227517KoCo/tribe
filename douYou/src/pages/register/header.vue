@@ -1,6 +1,6 @@
 <template>
   <van-nav-bar title="立即注册"
-               left-text="登录"
+               left-text="<"
                @click-left="toLogin"
   ></van-nav-bar>
 </template>
@@ -12,10 +12,14 @@
     name: "header",
     methods: {
       toLogin(){
-        console.log('toLogin');
         this.$router.push('/login');
       }
 
     }
   }
 </script>
+<style lang="scss">
+  .van-nav-bar__text{
+    color:#000;
+  }
+</style>
