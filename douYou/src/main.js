@@ -22,6 +22,7 @@ Vue.use(Panel);
 Vue.use(Uploader);
 Vue.use(Field);
 Vue.use(Cell).use(CellGroup);
+Vue.use(Dialog);
 // or with options
 Vue.use(Lazyload, {
   preLoad: 1.3,

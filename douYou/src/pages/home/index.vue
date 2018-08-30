@@ -41,13 +41,13 @@
               </div>
               <div v-else>
                 <van-row>
-                  <van-col span="24" @click="popPay()">
-                    <video class="video" controls="controls" :src="item.src">
+                  <van-col span="24">
+                    <video class="video" @click="popPay(item.dashang, item.id)"  :id="`video`+item.id" :src="item.src">
                     </video>
                   </van-col>
 
                   <van-col span="6" offset="18">
-                    <van-button type="danger">我要打赏</van-button>
+                    <van-button type="danger" style="background:#000;border:1px solid #000;">我要打赏</van-button>
                   </van-col>
                 </van-row>
               </div>
@@ -103,7 +103,8 @@
             date: "2018-08-08 09:09",
             src: 'https://gslb.miaopai.com/stream/ER2relVRgndDY9yX~arFFUaZUxjzyHgWQK-Aaw__.mp4?ssig=82a29035ead7c314874f3f2c4ec1f61e&time_stamp=1535356819096&cookie_id=&vend=1&os=3&partner=1&platform=2&cookie_id=&refer=miaopai&scid=ER2relVRgndDY9yX%7EarFFUaZUxjzyHgWQK-Aaw__',
             favorite: 1,
-            type: 'video'
+            type: 'video',
+            dashang: false,
           }
         ],
       }
@@ -131,6 +132,20 @@
             this.finished = true;
           }
         }, 500);
+      },
+      popPay(paly, id){
+        if(paly){
+          var video = document.getElementById('video'+id);
+          video.play();
+        }else{
+          this.$dialog.alert({
+            message: '要打赏才能观看哦'
+          }).then(() => {
+            
+          }).catch(() => {
+            // on cancel
+          });
+        }
       }
     }
   }
